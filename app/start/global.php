@@ -46,8 +46,33 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 |
 */
 
-App::error(function(Exception $exception, $code)
-{
+App::error(function(Exception $exception, $code) {
+
+	# In order for these to works, you need to create the following views:
+	# views/403.blade.php
+	# views/404.blade.php
+	# views/500.blade.php
+	if(Config::get('app.debug') == false) {
+		# 403 Forbidden
+		# The request was a valid request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference.
+	    if($code == 403) {
+	        return Response::view('errors.403', array(), 403);
+	    }
+	    # 404 Not Found
+		# The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
+	    elseif($code == 404) {
+	    	return Response::view('errors.404', array(), 404);
+	    }
+		# 500 Internal Server Error
+		# A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
+		elseif($code == 500) {
+			return Response::view('errors.500', array(), 500);
+		}
+		//else {
+		//	return Response::view('errors.default', array(), $code);
+		//}
+	}
+
 	Log::error($exception);
 });
 

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<h2>Password Reset</h2>
+		<h4>Password Reset</h4>
 
 		<div>
 			To reset your password, complete this form: {{ URL::to('password/reset', array($token)) }}.<br/>

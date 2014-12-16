@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+p{font-family: 'Montserrat', sans-serif;color:green;}
+label{font-family: 'Montserrat', sans-serif;}
+h2 {font-family: 'pacifico', sans-serif;color:orange;font-size:30px; text-align: center;}
+h4 {font-family: 'Montserrat', cursive;font-size:20px; color:green; }
+a {text-decoration: none; color:green;}
+body {padding:100px;}
+
+
+body {
+	padding:20px;
+}
+
+
+label,input {
+	display:block;
+	margin-top:10px;
+	
+}
+
+input[type=checkbox] {
+	display:inline;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.flash-message {
+	color:black;
+	position:absolute;
+	width:25%;
+	text-align:center;
+	padding:5px;
+margin:auto;
+	font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+	list-style:none;
+	text-align: center;
+	padding:5px 0px 5px 0px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: orange;
+	font-color:white;
+
+}
+nav ul li {
+	display:inline;
+	margin-right:10px;
+}
+
+
+
+
+a:link, a:visited, a:active,  {
+	text-decoration:none;
+}
+
+a:hover{
+	color:gray;
+}
+
+
+
+.image {
+    border: 1px solid #ccc;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    width: 600px;
+}
+
+.mood {
+
+	background-color:orange;
+	padding:2px;
+	font-size:11px;
+	font-family:montserrat;
+	margin:2px;
+	display:inline-block;
+
+}
