@@ -1,0 +1,6 @@
+imports:
+    - php
+
+tools:
+    external_code_photoage:
+        runs: 5 # No Code Photoage on PHP 5.2 and HHVM

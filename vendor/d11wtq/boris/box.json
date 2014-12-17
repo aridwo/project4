@@ -1,0 +1,16 @@
+{
+    "files": ["LICENSE"],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "tests"
+            ],
+            "in": "lib"
+        }
+    ],
+    "git-version": "git_mood",
+    "main": "bin/boris",
+    "output": "boris.phar",
+    "stub": true
+}
