@@ -25,7 +25,7 @@ class CreateAuthorsTable extends Migration {
 			
 			
 			# Define foreign keys...
-			# none needed
+		
 
 		});
 

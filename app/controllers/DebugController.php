@@ -126,34 +126,7 @@ class DebugController extends BaseController {
 	}
 
 
-	/**
-	* Old seeder - have since moved to proper seeding
-	* http://localhost/debug/seed-images
-	*
-	* @return String
-	*/
-	public function getSeedImages() {
-
-		return 'This seed will no longer work because the images table is no longer embedded with the author.';
-
-		# Build the raw SQL query
-		$sql = "INSERT INTO images (author,title,published,photo,purchase_link) VALUES
-		        ('F. Scott Fitzgerald','The Great Gatsby',1925,'http://img2.imagesbn.com/p/9780743273565_p0_v4_s114x166.JPG','http://www.barnesandnoble.com/w/the-great-gatsby-francis-scott-fitzgerald/1116668135?ean=9780743273565'),
-		        ('Sylvia Plath','The Bell Jar',1963,'http://img1.imagesbn.com/p/9780061148514_p0_v2_s114x166.JPG','http://www.barnesandnoble.com/w/bell-jar-sylvia-plath/1100550703?ean=9780061148514'),
-		        ('Maya Angelou','I Know Why the Caged Bird Sings',1969,'http://img1.imagesbn.com/p/9780345514400_p0_v1_s114x166.JPG','http://www.barnesandnoble.com/w/i-know-why-the-caged-bird-sings-maya-angelou/1100392955?ean=9780345514400')
-		        ";
-
-		# Run the SQL query
-		echo DB::statement($sql);
-
-		# Get all the images just to test it worked
-		$images = DB::table('images')->get();
-
-		# Print all the images
-		echo Paste\Pre::render($images,'');
-
-	}
-
+	
 	/*
 	* Test to make sure we can connect to MySQL
 	*

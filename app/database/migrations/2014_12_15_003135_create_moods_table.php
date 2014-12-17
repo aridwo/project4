@@ -25,7 +25,7 @@ class CreateMoodsTable extends Migration {
 			$table->string('name', 64);
 			
 			# Define foreign keys...
-			# none needed
+			
 
 		});
 	}

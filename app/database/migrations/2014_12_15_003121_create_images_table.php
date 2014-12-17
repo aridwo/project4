@@ -28,6 +28,7 @@ class CreateImagesTable extends Migration {
 			
 			# Define foreign keys...
 			$table->foreign('author_id')->references('id')->on('authors');
+			
 
 		});
 

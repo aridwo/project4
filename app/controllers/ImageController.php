@@ -16,24 +16,6 @@ class ImageController extends \BaseController {
 	}
 
 
-	/**
-	* Used as an example for something you might want to set up a cron job for
-	*/
-	public function getDigest() {
-
-		$images = Image::getImagesAddedInTheLast24Hours();
-
-		$users = User::all();
-
-		$recipients = Image::sendDigests($users,$images);
-
-		$results = 'Image digest sent to: '.$recipients;
-
-		Log::info($results);
-
-		return $results;
-
-	}
 
 
 	/**
@@ -194,43 +176,6 @@ class ImageController extends \BaseController {
 
 	    return Redirect::to('/image/')->with('flash_message', 'Image deleted.');
 
-	}
-
-
-	/**
-	* Process a image search
-	* Called w/ Ajax
-	*/
-	public function postSearch() {
-
-		if(Request::ajax()) {
-
-			$query  = Input::get('query');
-
-			# We're demoing two possible return formats: JSON or HTML
-			$format = Input::get('format');
-
-			# Do the actual query
-	        $images  = Image::search($query);
-
-	        # If the request is for JSON, just send the images back as JSON
-	        if($format == 'json') {
-		        return Response::json($images);
-	        }
-	        # Otherwise, loop through the results building the HTML View we'll return
-	        elseif($format == 'html') {
-
-		        $results = '';
-				foreach($images as $image) {
-					# Created a "stub" of a view called image_search_result.php; all it is is a stub of code to display a image
-					# For each image, we'll add a new stub to the results
-					$results .= View::make('image_search_result')->with('image', $image)->render();
-				}
-
-				# Return the HTML/View to JavaScript...
-				return $results;
-			}
-		}
 	}
 
 

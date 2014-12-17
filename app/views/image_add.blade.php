@@ -10,7 +10,7 @@
 
 	{{ Form::open(array('url' => '/image/create')) }}
 
-		{{ Form::label('title','Title:') }}
+		<p>{{ Form::label('title','Title:') }}
 		{{ Form::text('title'); }}
 
 		{{ Form::label('author_id', 'Photographer:') }}
@@ -25,7 +25,7 @@
 		{{ Form::label('mood','Select mood(s) of photo:') }}
 		@foreach($moods as $id => $mood)
 			{{ Form::checkbox('moods[]', $id); }} {{ $mood }}
-		@endforeach
+		@endforeach</p>
 	
 
 		{{ Form::submit('Add'); }}

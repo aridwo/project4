@@ -18,18 +18,13 @@
 		{{ Form::hidden('id',$image['id']); }}
 
 		<p>Adjust mood(s):
-
-		
-
-
-	
-			@foreach($moods as $id => $mood)
+@foreach($moods as $id => $mood)
 				{{ Form::checkbox('moods[]', $id, $image->moods->contains($id)); }} {{ $mood }}
 				
 			@endforeach
 		
 
-		{{ Form::submit('Save'); }}
+		{{ Form::submit('Update'); }}
 
 	{{ Form::close() }}
 

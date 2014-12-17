@@ -138,5 +138,4 @@ class MoodController extends \BaseController {
 
 	}
 
-
 }
