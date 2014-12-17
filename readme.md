@@ -1,25 +1,21 @@
-## Laravel PHP Framework
+Mood Bank:
+http://p4.aridwo.me
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Description of the project (2-3+ sentences):
+Conventional scientific understanding is that there are six basic emotions – happy, sad, angry, scared, disgusted, and surprised. Mood Bank is an application that allows its visitors to partake in the full range of these 6 human emotions, or moods, by the sensory experience of viewing images. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+When visitors go to the homepage, they are greeted by 6 different facial expressions which    are each representatives for one of the six moods, by clicking on a face visitors are then redirected to all the images in the mood bank that convey the chosen mood. 
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+If a visitor signs up for an account, they will have access to these 3 website features that non-users do not: 
+1) Access to "all images", which, when clicked in the header menu, allows users to view all photos in the mood bank
+2) Editing the mood(s) associated with an image in the mood bank
+3) The ability to add a new image to the mood bank. 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Demo information: 
+http://screencast.com/t/Bc62ia0z5p
 
-## Official Documentation
-
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+A list of any plugins, libraries, packages or outside code used in the project:
+– Paste/Pre
+– Class Examples
+– Laravel
+– Composer
