@@ -15,7 +15,6 @@ Demo information:
 http://screencast.com/t/Bc62ia0z5p
 
 Test Account:
-email: janedoe@email.com
-password:janedoe
+email: janedoe@email.com | password:janedoe
 
 A list of any plugins, libraries, packages or outside code used in the project: Paste/Pre, Class Examples, Laravel, & Composer
