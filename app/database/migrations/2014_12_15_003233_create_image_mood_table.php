@@ -25,8 +25,6 @@ class CreateImageMoodTable extends Migration {
 			# Define foreign keys...
 			$table->foreign('image_id')->references('id')->on('images');
 			$table->foreign('mood_id')->references('id')->on('moods');
-			 $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');   
-			  $table->foreign('mood_id')->references('id')->on('moods')->onDelete('cascade');  
 			
 		});
 	}
