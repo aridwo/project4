@@ -28,13 +28,7 @@
 
 	{{ Form::close() }}
 
-	<div>
-		{{---- DELETE -----}}
-		{{ Form::open(array('url' => '/image/delete')) }}
-			{{ Form::hidden('id',$image['id']); }}
-			<button onClick='parentNode.submit();return false;'>Delete</button>
-		{{ Form::close() }}
-	</div>
+	
 
 
 @stop
