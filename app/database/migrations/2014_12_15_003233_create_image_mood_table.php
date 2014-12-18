@@ -19,8 +19,8 @@ class CreateImageMoodTable extends Migration {
 			# none needed
 
 			# General data...
-			$table->integer('image_id')->null();
-			$table->integer('mood_id')->null();
+			$table->integer('image_id')->unsigned();
+			$table->integer('mood_id')->unsigned();
 			
 			# Define foreign keys...
 			$table->foreign('image_id')->references('id')->on('images');

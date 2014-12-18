@@ -58,22 +58,6 @@ Route::post('/image/search', 'ImageController@postSearch');
 Route::controller('debug', 'DebugController');
 
 
-/**
-* Tag
-* (Implicit RESTful Routing)
-*/
-Route::resource('image', 'ImageController');
 
-Route::get('/get-environment',function() {
 
-    echo "Environment: ".App::environment();
-
-});
-
-Route::get('/trigger-error',function() {
-
-    # Class Foobar should not exist, so this should create an error
-    $foo = new Foobar;
-
-});
 
