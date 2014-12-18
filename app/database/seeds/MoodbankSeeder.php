@@ -17,6 +17,59 @@ class MoodbankSeeder extends Seeder {
 		$acaso->name = 'Anne Acaso';
 		$acaso->save();
 
+		$akada = new Author;
+		$akada->name = 'Ben Akada';
+		$akada->save();
+
+		$other = new Author;
+$other->name = 'Other';
+$other->save();
+
+$getty = new Author;
+$getty->name = 'Getty Images';
+$getty->save();
+
+$lumsden = new Author;
+$lumsden->name = 'Angela Lumsden';
+$lumsden->save();
+
+$jpm = new Author;
+$jpm->name = 'JPM';
+$jpm->save();
+
+$paige = new Author;
+$paige->name = 'Sara Lynn Paige';
+$paige->save();
+
+$brandnew = new Author;
+$brandnew->name = 'Brand New Images';
+$brandnew->save();
+
+$getty = new Author;
+$getty->name = 'Getty Images';
+$getty->save();
+
+$tya = new Author;
+$tya->name = 'Ty Allison';
+$tya->save();
+
+$otis = new Author;
+$otis->name = 'Dmitri Otis';
+$otis->save();
+
+$vlad = new Author;
+$vlad->name = 'Vladimir Godnik';
+$vlad->save();
+
+$lund = new Author;
+$lund->name = 'John Lund';
+$lund->save();
+
+$glow = new Author;
+$glow->name = 'Glow Cuisine';
+$glow->save();
+
+
 	
 
 		# Moods (Created using the Model Create shortcut method)
@@ -33,15 +86,25 @@ class MoodbankSeeder extends Seeder {
 		$balloons = new Image;
 		$balloons->title = 'Girl with Balloons';
 		$balloons->photo = 'http://oi59.tinypic.com/o8s68n.jpg';
-		
-
-		# Associate has to be called *before* the image is created (save())
-		$balloons->author()->associate($acaso); # Equivalent of $balloons->author_id = $acaso->id
+		$balloons->author()->associate($acaso); 
 		$balloons->save();
-
-		# Attach has to be called *after* the image is created (save()),
-		# since resulting `image_id` is needed in the image_mood pivot table
 		$balloons->moods()->attach($happy);
+
+		$cat = new Image;
+		$cat->title = 'Curmudgeon';
+		$cat->photo = 'http://oi62.tinypic.com/2lj6k5w.jpg';
+		$cat->author()->associate($akada); 
+		$cat->save();
+		$cat->moods()->attach($angry);
+		$cat->moods()->attach($disgusted);
+
+		$sadboy = new Image;
+		$sadboy->title = 'Boy with sad expression';
+		$sadboy->photo = 'http://oi59.tinypic.com/o8s68n.jpg';
+		$sadboy->author()->associate($acaso); 
+		$sadboy->save();
+		$sadboy->moods()->attach($happy);
+
 		
 
 
