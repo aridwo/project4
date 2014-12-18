@@ -7,6 +7,7 @@ class UserController extends BaseController {
 	*/
 	public function __construct() {
 
+		# Make sure BaseController construct gets called
 		parent::__construct();
 
         $this->beforeFilter('guest',
@@ -60,7 +61,7 @@ class UserController extends BaseController {
 		}
 		catch (Exception $e) {
 			return Redirect::to('/signup')
-				->with('flash_message', 'Pleae try again.')
+				->with('flash_message', 'Sign up failed; please try again.')
 				->withInput();
 		}
 
@@ -69,7 +70,7 @@ class UserController extends BaseController {
 
 		$user->sendWelcomeEmail();
 
-		return Redirect::to('/')->with('flash_message', 'Welcome to Mood Bank!');
+		return Redirect::to('/')->with('flash_message', 'Welcome to Mood Bank');
 
 	}
 
@@ -93,11 +94,11 @@ class UserController extends BaseController {
 
 		# Note we don't have to hash the password before attempting to auth - Auth::attempt will take care of that for us
 		if (Auth::attempt($credentials, $remember = false)) {
-			return Redirect::intended('/')->with('flash_message', 'Howdy!');
+			return Redirect::intended('/')->with('flash_message', 'Welcome Back!');
 		}
 		else {
 			return Redirect::to('/login')
-				->with('flash_message', 'Please try again.')
+				->with('flash_message', 'Log in failed; please try again.')
 				->withInput();
 		}
 
