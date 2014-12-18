@@ -73,7 +73,7 @@ $glow->save();
 	
 
 		# Moods (Created using the Model Create shortcut method)
-		# Note: Moods model must have `protected $fillable = array('name');` in order for this to work
+		
 		$happy         = Mood::create(array('name' => 'happy'));
 		$sad       = Mood::create(array('name' => 'sad'));
 		$angry    = Mood::create(array('name' => 'angry'));
@@ -100,10 +100,10 @@ $glow->save();
 
 		$sadboy = new Image;
 		$sadboy->title = 'Boy with sad expression';
-		$sadboy->photo = 'http://oi59.tinypic.com/o8s68n.jpg';
-		$sadboy->author()->associate($acaso); 
+		$sadboy->photo = 'http://oi60.tinypic.com/fm2eqa.jpg';
+		$sadboy->author()->associate($lumsden); 
 		$sadboy->save();
-		$sadboy->moods()->attach($happy);
+		$sadboy->moods()->attach($sad);
 
 		
 
