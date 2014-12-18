@@ -1,5 +1,5 @@
 <section>
-	<img class='cover' src='{{ $image['cover'] }}'>
+	<img class='photo' src='{{ $image['photo'] }}'>
 
 	<h4>{{ $image['title'] }}</h4>
 
