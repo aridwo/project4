@@ -14,8 +14,8 @@ If a visitor signs up for an account, they will have access to these 3 website f
 Demo information: 
 http://screencast.com/t/Bc62ia0z5p
 
-A list of any plugins, libraries, packages or outside code used in the project:
-– Paste/Pre
-– Class Examples
-– Laravel
-– Composer
+Test Account:
+email: janedoe@email.com
+password:janedoe
+
+A list of any plugins, libraries, packages or outside code used in the project: Paste/Pre, Class Examples, Laravel, & Composer

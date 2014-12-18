@@ -6,7 +6,7 @@
 
 @section('content')
 
-<h4>Account Signup</h4>
+<h4>Log In</h4>
 
 {{ Form::open(array('url' => '/login')) }}
 
