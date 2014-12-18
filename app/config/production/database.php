@@ -9,7 +9,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'images',
 			'username'  => 'root',
-			'password'  => 'length-area-wall8@',
+			'password'  => 'JoQM1DYoJs',
 		),
 
 	),
