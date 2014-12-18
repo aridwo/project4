@@ -2,12 +2,9 @@
 
 class DebugController extends BaseController {
 
-	/**
-	*
-	*/
+
 	public function __construct() {
 
-		# Make sure BaseController construct gets called
 		parent::__construct();
 
 	}
@@ -105,25 +102,7 @@ class DebugController extends BaseController {
 	}
 
 
-	/**
-	* http://localhost/debug/images-json
-	*
-	* @return String
-	*/
-	public function getImagesJson() {
 
-		# Old school way of getting images using the Library class and images.json
-		# We've since updated this method with the Image model class and `images` table
-
-		# Instantiating an object of the Library class
-		$library = new Library(app_path().'/database/images.json');
-
-		# Get the images
-		$images = $library->getImages();
-
-		# Debug
-		return Pre::render($images, 'Images');
-	}
 
 
 	

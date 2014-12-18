@@ -8,7 +8,6 @@ class MoodController extends \BaseController {
 	*/
 	public function __construct() {
 
-		# Make sure BaseController construct gets called
 		parent::__construct();
 
 		# Only logged in users are allowed here

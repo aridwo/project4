@@ -65,10 +65,7 @@ class Image extends Eloquent {
             ->orWhere('title', 'LIKE', "%$query%")
             ->get();
 
-            # Note on what `use` means above:
-            # Closures may inherit variables from the parent scope.
-            # Any such variables must be passed to the `use` language construct.
-
+            
         }
         # Otherwise, just fetch all images
         else {
@@ -80,25 +77,6 @@ class Image extends Eloquent {
     }
 
 
-
-    /**
-    * Searches and returns any images added in the last 24 hours
-    *
-    * @return Collection
-    */
-    public static function getImagesAddedInTheLast24Hours() {
-
-        # Timestamp of 24 hours ago
-        $past_24_hours = strtotime('-1 day');
-
-        # Convert to MySQL timestamp
-        $past_24_hours = date('Y-m-d H:i:s', $past_24_hours);
-
-        $images = Image::where('created_at','>',$past_24_hours)->get();
-
-        return $images;
-
-    }
 
 
     /**
