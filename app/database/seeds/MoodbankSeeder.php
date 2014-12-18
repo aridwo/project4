@@ -1,6 +1,6 @@
 <?php
 
-class FooimagesSeeder extends Seeder {
+class MoodbankSeeder extends Seeder {
 
 	public function run() {
 
